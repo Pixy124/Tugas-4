@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="in">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulir Pendaftaran Praktik Kerja Lapangan (PKL)</title>
+    <link rel="stylesheet" href="biodata.css">
+</head>
+<body>
+    <form action="/action_page.php" method="post" enctype="multipart/form-data">
+        <label for="fname">Nama Depan:</label>
+        <input type="text" id="fname" name="fname">
+
+        <label for="lname">Nama Belakang:</label>
+        <input type="text" id="lname" name="lname">
+
+        <p>Jenis Kelamin:</p>
+        <input type="radio" id="laki-laki" name="jenis_kelamin" value="laki-laki">
+        <label for="laki-laki">Laki-laki</label>
+
+        <input type="radio" id="perempuan" name="jenis_kelamin" value="perempuan">
+        <label for="perempuan">Perempuan</label>
+
+        <fieldset>
+            <legend>Tempat dan Tanggal Lahir</legend>
+            <label for="tempat_lahir">Tempat Lahir:</label>
+            <input type="text" id="tempat_lahir" name="tempat_lahir">
+
+            <label for="tanggal_lahir">Tanggal Lahir:</label>
+            <input type="date" id="tanggal_lahir" name="tanggal_lahir">
+
+            <label for="usia">Usia:</label>
+            <input type="number" id="usia" name="usia">
+        </fieldset>
+
+        <label for="agama">Agama:</label>
+        <select id="agama" name="agama">
+            <option value="islam">Islam</option>
+            <option value="kristen_protestan">Kristen Protestan</option>
+            <option value="kristen_katolik">Kristen Katolik</option>
+            <option value="budha">Budha</option>
+            <option value="hindu">Hindu</option>
+            <option value="khonghucu">Khonghucu</option>
+        </select>
+
+        <fieldset>
+            <legend>Alamat</legend>
+            <label for="provinsi">Provinsi:</label>
+            <input list="provinsi_list" name="provinsi">
+            <datalist id="provinsi_list">
+                <option value="Jawa Barat">
+                <option value="Jawa Tengah">
+                <option value="Jawa Timur">
+                <option value="DKI Jakarta">
+                <option value="Bengkulu">
+            </datalist>
+
+            <label for="kode_pos">Kode Pos:</label>
+            <input type="text" id="kode_pos" name="kode_pos">
+
+            <label for="rt">RT:</label>
+            <input type="text" id="rt" name="rt">
+
+            <label for="rw">RW:</label>
+            <input type="text" id="rw" name="rw">
+
+            <label for="desa_kelurahan">Desa/Kelurahan:</label>
+            <select id="desa_kelurahan" name="desa_kelurahan">
+                <option value="cipada">Cipada</option>
+                <option value="jambudipa">Jambudipa</option>
+                <option value="kertawangi">Kertawangi</option>
+                <option value="pandaasih">Pandaasih</option>
+                <option value="pasir_halang">Pasir Halang</option>
+                <option value="pasir_langu">Pasir Langu</option>
+                <option value="tugu_mukti">Tugu Mukti</option>
+                <option value="sadang_mekar">Sadang Mekar</option>
+            </select>
+
+            <label for="kecamatan">Kecamatan:</label>
+            <select id="kecamatan" name="kecamatan">
+                <option value="cisarua">Cisarua</option>
+                <option value="cipatat">Cipatat</option>
+                <option value="cikalong_wetan">Cikalong Wetan</option>
+                <option value="lembang">Lembang</option>
+                <option value="ngamprah">Ngamprah</option>
+                <option value="parongpong">Parongpong</option>
+                <option value="padalarang">Padalarang</option>
+            </select>
+
+            <label for="kabupaten/kota">Kabupaten/Kota:</label>
+            <select id="kabupaten/kota" name="kabupaten/kota">
+                <option value="kab.bandung barat">Kab. Bandung Barat</option>
+                <option value="kab.bandung">Kab. Bandung</option>
+                <option value="kab.cianjur">Kab. Cianjur</option>
+                <option value="kab.sumedang">Kab. Sumedang</option>
+                <option value="kota bandung">Kota Bandung</option>
+                <option value="kota cimahi">Kota Cimahi</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Kontak</legend>
+            <label for="no_telp_siswa">Nomor Telepon Siswa:</label>
+            <input type="tel" id="no_telp_siswa" name="no_telp_siswa" pattern="[0-9]{10,13}">
+
+            <label for="no_telp_wali">Nomor Telepon Orang Tua/Wali:</label>
+            <input type="tel" id="no_telp_wali" name="no_telp_wali" pattern="[0-9]{10,13}">
+
+            <label for="email_siswa">Email Siswa:</label>
+            <input type="email" id="email_siswa" name="email_siswa">
+        </fieldset>
+
+        <fieldset>
+            <legend>Akun</legend>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username">
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+
+            <label for="confirm_password">Konfirmasi Password:</label>
+            <input type="password" id="confirm_password" name="confirm_password">
+        </fieldset>
+
+        <fieldset>
+            <legend>Tempat PKL</legend>
+            <label for="tempat_pkl">Pilih Tempat PKL:</label>
+            <select id="tempat_pkl" name="tempat_pkl" multiple>
+                <option value="tempat_1">PT. Telkom Indonesia, Tbk</option>
+                <option value="tempat_2">PT. Bukalapak.com</option>
+                <option value="tempat_3">PT. Gojek Indonesia</option>
+                <option value="tempat_4">PT. Tokopedia</option>
+                <option value="tempat_5">PT. Traveloka Indonesia</option>
+                <option value="tempat_6">PT. Indosat Ooredoo Hutchison</option>
+                <option value="tempat_7">PT. Mitra Integrasi Informatika (MII)</option>
+                <option value="tempat_8">PT. IBM Indonesia</option>
+                <option value="tempat_9">PT. Microsoft Indonesia</option>
+                <option value="tempat_10">PT. Astra Graphia Information Technology</option>
+                <option value="tempat_11">PT. Huawei Tech Investment</option>
+                <option value="tempat_12">PT. Oracle Indonesia</option>
+                <option value="tempat_13">PT. Samsung R&D Institute Indonesia</option>
+                <option value="tempat_14">PT. Datalabs Indonesia</option>
+                <option value="tempat_15">PT. Unilever Indonesia</option>
+                <option value="tempat_16">PT. XL Axiata Tbk</option>
+                <option value="tempat_17">PT. Shopee Indonesia</option>
+                <option value="tempat_18">PT. Tokosolusi Teknologi (Warung Pintar)</option>
+                <option value="tempat_19">PT. Mekari (Talenta, Sleekr)</option>
+                <option value="tempat_20">PT. Kudo Teknologi Indonesia</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Upload Persyaratan</legend>
+            <label for="pas_foto">Upload Pas Foto 3x4:</label>
+            <input type="file" id="pas_foto" name="pas_foto" accept="image/*">
+
+            <label for="kartu_pelajar">Upload Kartu Tanda Pelajar:</label>
+            <input type="file" id="kartu_pelajar" name="kartu_pelajar" accept=".pdf, .doc, .docx">
+        </fieldset>
+
+        <input type="submit" value="Kirim">
+        <input type="reset" value="Reset">
+    </form>
+
+    <footer>
+        <p>&copy; 2024 Hak Cipta Dilindungi. Seluruh Hak Cipta.</p>
+    </footer>
+</body>
+</html>
